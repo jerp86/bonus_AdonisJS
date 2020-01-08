@@ -5,7 +5,7 @@ class NewTaskMail {
   // Se esse getter não for fornecido, o padrão será 1.
   // Aumente esse número para aumentar a simultaneidade do processamento.
   static get concurrency() {
-    return 1;
+    return 5;
   }
 
   // Isso é necessário. Essa é uma chave exclusiva usada para identificar este trabalho.
@@ -16,6 +16,7 @@ class NewTaskMail {
   // É aqui que o trabalho é feito.
   async handle({ email, username, title, file }) {
     console.log(`Job: ${NewTaskMail.key}`);
+
     await Mail.send(
       ['emails.new_task', 'emails.new_task-text'],
       { username, title, hasAttachment: !!file },

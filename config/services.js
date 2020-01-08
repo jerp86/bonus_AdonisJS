@@ -1,4 +1,4 @@
-/** @typedef {import('@adonisjs/framework/src/Env')} Env */
+/** @type {typeof import('@adonisjs/framework/src/Env')} Env */
 const Env = use('Env');
 
 module.exports = {

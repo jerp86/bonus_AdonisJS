@@ -44,12 +44,10 @@ class ExceptionHandler extends BaseExceptionHandler {
    * @method report
    *
    * @param  {Object} error
-   * @param  {Object} options.request
    *
    * @return {void}
    */
-  async report(error, { request }) {
-    console.log(Config.get('services.sentry.dsn'));
+  async report(error) {
     Sentry.init({ dsn: Config.get('services.sentry.dsn') });
     Sentry.captureException(error);
   }
