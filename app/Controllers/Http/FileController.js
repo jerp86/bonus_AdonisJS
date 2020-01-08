@@ -1,5 +1,6 @@
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
+/** @typedef {import('@adonisjs/ignitor/src/Helpers')} Helpers */
 
 const File = use('App/Models/File');
 const Helpers = use('Helpers');
